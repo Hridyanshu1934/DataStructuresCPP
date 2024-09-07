@@ -7,8 +7,11 @@ int main(){
     int counter = 0;
 
     for(int i = 0 ; i<AreAnagrams1.length();i++){
+
         for(int j = 0;j<AreAnagrams2.length();j++){
+
             if(AreAnagrams1[i] == AreAnagrams2[j]){
+                
                 cout<<"The letter - "<<AreAnagrams1[i]<<" is a the position of "<<j<<" in second Anagram"<<endl;
                 counter++;
             }
