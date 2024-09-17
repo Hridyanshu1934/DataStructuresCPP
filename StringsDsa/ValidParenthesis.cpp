@@ -2,32 +2,25 @@
 using namespace std;
 
 int main(){
-    string Parenthesis = "[] }";
+    string Parenthesis = "titae ki taant";
 
-    bool isParenthesis = 0;
+    unsigned int count = 0;
 
     for(int i = 0 ; i<Parenthesis.length(); i++){
 
-        if(Parenthesis[i] == '{' && Parenthesis[i+1] == '}'){
-            isParenthesis = 1;
-            break;
+        if(Parenthesis[i] == '{' || Parenthesis[i] == '(' || Parenthesis[i] == '['){
+            count++;
         }
-        continue;
 
-        if(Parenthesis[i] == '(' && Parenthesis[i+1] == ')'){
-            isParenthesis = 1;
-            break;
-        }
-        continue;
-
-        if(Parenthesis[i] == '[' && Parenthesis[i+1] == ']'){
-            isParenthesis = 1;
-            break;
+        if(Parenthesis[i] == '}'|| Parenthesis[i] == ')' || Parenthesis[i] == ']'){
+            count--;
         }
         
-        else{
-            isParenthesis = 0;
-        }
     }
-    cout<<isParenthesis;
+    if(count == 0){
+        cout<<"This is a valid parenthesis string";
+    }
+    else{
+        cout<<"This is an invalid parenthesis string";
+    }
 }
