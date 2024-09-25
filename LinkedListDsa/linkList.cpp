@@ -17,8 +17,8 @@ int main(){
     head -> nextNodePointer = second;
     second -> dataInTheNode = 20;
     second -> nextNodePointer = third;
-    third -> dataInTheNode = 30;
     third -> nextNodePointer = fourth;
+    third -> dataInTheNode = 30;
     fourth -> dataInTheNode = 40;
     fourth -> nextNodePointer = nullptr;
     struct Node * traversalPointer;

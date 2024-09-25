@@ -1,8 +1,8 @@
 #include <iostream>
 using namespace std;
 int main(){
-    int a = 56;
-    int n = a;
+    int a = 38;
+    int n = a/2;
     int b = 0;
     while (b <= n){
         int mid = (b + n) / 2;
