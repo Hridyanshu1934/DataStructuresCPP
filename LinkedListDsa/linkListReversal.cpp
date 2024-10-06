@@ -37,9 +37,9 @@ Node* reverseList(Node* head) {
 
 int main() {
     Node* head = new Node(1);
-    head->nextNode = new Node(2);
-    head->nextNode->nextNode = new Node(3);
-    head->nextNode->nextNode->nextNode = new Node(4);
+    // head->nextNode = new Node(2);
+    // head->nextNode->nextNode = new Node(3);
+    // head->nextNode->nextNode->nextNode = new Node(4);
 
     cout << "Original list: ";
     printList(head);
