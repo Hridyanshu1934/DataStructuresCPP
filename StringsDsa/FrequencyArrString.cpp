@@ -10,11 +10,11 @@ void stringCharFrequency(string str,char ch){
     cout << ch << " is " << freqArr[ch - 'a'] <<" times in the given string"<< endl;
     }
     else{
-        cout<< ch <<"is not present in the given string "<<endl;
+        cout<< ch <<" is not present in the given string "<<endl;
     }
 }
 int main(){
     string str = "aabbcdddc";
-    char ch = 'a';
+    char ch = 'e';
     stringCharFrequency(str,ch);
 }
