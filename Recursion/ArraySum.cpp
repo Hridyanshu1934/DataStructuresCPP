@@ -1,8 +1,14 @@
 #include <iostream>
 using namespace std;
-int i = 0;
-int sum = 0;
-int arrSum(int arr[],i){
-    sum = arr[i]+arrSum(arr,i+1);
-    return sum;
+
+int arraySum(int arr[], int n) {
+    if (n <= 0)
+        return 0;
+    return arr[n - 1] + arraySum(arr, n - 1);
+}
+int main() {
+    int arr[] = {10,9,-3,2,1};
+    int n = sizeof(arr) / sizeof(arr[0]);
+    cout << "Sum of the array elements is " << arraySum(arr, n) << endl;
+    return 0;
 }

@@ -1,5 +1,4 @@
 #include <iostream> 
-
 #include <bits/stdc++.h> 
 
 using namespace std; 
@@ -13,7 +12,8 @@ int maxSubarraySum(int arr[], int n) {
   
 
     for (int i = 0; i < n; i++) { 
-
+s
+s
         int sum = 0; 
 
         for (int j = i; j < n; j++) { 
@@ -33,8 +33,6 @@ int maxSubarraySum(int arr[], int n) {
     return maximum; 
 
 } 
-
-  
 
 int main() 
 
