@@ -79,4 +79,26 @@ public:
         prev->next = current->next;
         delete current;
     }
+   void merge(LinkedList& linkList2) {
+    Node* l1 = this->head;
+    Node* l2 = linkList2.head;
+    Node* ptr = new Node(0);
+    Node* ptr2 = ptr;
+    while (l1 != nullptr && l2 != nullptr) {
+        if (l1->data < l2->data) {
+            ptr2->next = l1;
+            l1 = l1->next;
+        } else {
+            ptr2->next = l2;
+            l2 = l2->next;
+        }
+        ptr2 = ptr2->next;
+    }
+    if (l1 != nullptr) {
+        ptr2->next = l1;
+    } else {
+        ptr2->next = l2;
+    }
+    this->head = ptr->next;
+}
 };

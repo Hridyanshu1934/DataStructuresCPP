@@ -32,6 +32,14 @@ public:
             current = nextNode;
         }
     }
+    void concatenate(LinkedList& linkList2) {
+        Node* lastNode = head;
+        while (lastNode->next) {
+            lastNode = lastNode->next;
+        }
+        lastNode->next = linkList2.head;
+        linkList2.head = nullptr;
+    }
 
     void addNewNode(int data) {
         Node* newNode = new Node(data);

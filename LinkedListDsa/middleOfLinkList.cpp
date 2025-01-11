@@ -1,6 +1,6 @@
 #include <iostream>
 using namespace std;
-
+// This is using 2 pointers rather than the bruteforcce approach
 class Node {
 public:
     int data;
@@ -32,6 +32,17 @@ public:
             current = nextNode;
         }
     }
+    int findMiddle() {
+    Node* slow = head;  
+    Node* fast = head; 
+
+    while (fast!=nullptr && fast->next != nullptr) {
+        slow = slow->next;          
+        fast = fast->next->next;
+    }
+
+    return slow->data;
+}
 
     void addNewNode(int data) {
         Node* newNode = new Node(data);
